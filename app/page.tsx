@@ -1,11 +1,15 @@
 import InfoLinkGrid from "@/components/InfoLinkGrid";
 import InfoLinkItem from "@/components/InfoLinkItem";
+import MainGrid from "@/components/MainGrid";
+import MainItem from "@/components/MainItem";
 import Navbar from "@/components/Navbar";
+
+import { mainItems } from "@/utils/mainItems";
 
 function Home() {
   return (
     <>
-      <header className="fixed py-5 px-2 left-0 right-0 top-0">
+      <header className="fixed py-5 px-2 left-0 right-0 top-0 z-[999]">
         <Navbar />
       </header>
       <main>
@@ -23,6 +27,17 @@ function Home() {
             path="who-is-minimalism-for"
           />
         </InfoLinkGrid>
+        <MainGrid>
+          {mainItems.map((mainItem, i) => (
+            <MainItem
+              key={i}
+              name={mainItem.name}
+              description={mainItem.description}
+              image={mainItem.image}
+              path={mainItem.path}
+            />
+          ))}
+        </MainGrid>
       </main>
     </>
   );
