@@ -3,6 +3,7 @@ import InfoLinkItem from "@/components/InfoLinkItem";
 import MainGrid from "@/components/MainGrid";
 import MainItem from "@/components/MainItem";
 import Navbar from "@/components/Navbar";
+import Newsletter from "@/components/Newsletter";
 
 import { mainItems } from "@/utils/mainItems";
 
@@ -38,6 +39,7 @@ function Home() {
             />
           ))}
         </MainGrid>
+        <Newsletter />
       </main>
     </>
   );
