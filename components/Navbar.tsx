@@ -13,7 +13,7 @@ function Navbar() {
             Menu
           </button>
         </li>
-        <li className="hidden lg:block">
+        <li className="hidden md:block lg:block">
           <Image src={logo} width={20} height={20} alt="logo" />
         </li>
       </ul>
