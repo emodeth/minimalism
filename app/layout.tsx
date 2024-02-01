@@ -14,7 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="relative pt-[160px]">{children}</body>
+      <body className="relative pt-[160px] pb-[20px]">{children}</body>
     </html>
   );
 }

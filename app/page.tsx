@@ -4,6 +4,7 @@ import MainGrid from "@/components/MainGrid";
 import MainItem from "@/components/MainItem";
 import Navbar from "@/components/Navbar";
 import Newsletter from "@/components/Newsletter";
+import StaticFooter from "@/components/StaticFooter";
 
 import { mainItems } from "@/utils/mainItems";
 
@@ -40,6 +41,7 @@ function Home() {
           ))}
         </MainGrid>
         <Newsletter />
+        <StaticFooter />
       </main>
     </>
   );
