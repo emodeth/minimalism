@@ -1,3 +1,4 @@
+import DynamicFooter from "@/components/DynamicFooter";
 import InfoLinkGrid from "@/components/InfoLinkGrid";
 import InfoLinkItem from "@/components/InfoLinkItem";
 import MainGrid from "@/components/MainGrid";
@@ -42,6 +43,7 @@ function Home() {
         </MainGrid>
         <Newsletter />
         <StaticFooter />
+        <DynamicFooter />
       </main>
     </>
   );
