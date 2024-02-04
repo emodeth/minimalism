@@ -1,5 +1,6 @@
 import Image from "next/image";
 import logo from "@/public/logo.svg";
+import MenuButton from "./MenuButton";
 
 function Navbar() {
   return (
@@ -9,9 +10,7 @@ function Navbar() {
           Minimalism Life®
         </li>
         <li>
-          <button className="uppercase transition-all hover:bg-[#262626] rounded-md py-1 px-2 lg:mr-[95px]">
-            Menu
-          </button>
+          <MenuButton />
         </li>
         <li className="hidden md:block lg:block">
           <Image src={logo} width={20} height={20} alt="logo" />

@@ -7,3 +7,7 @@ body {
   color: #efefef;
   font-family: "Inter", sans-serif;
 }
+
+.menu-last-item {
+  grid-column: 1 / -1;
+}
