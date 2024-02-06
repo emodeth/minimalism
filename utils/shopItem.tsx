@@ -72,7 +72,7 @@ enum tag {
   tables = "tables",
 }
 
-interface IShopItems {
+export interface IShopItem {
   name: string;
   brand: string;
   price: number;
@@ -80,7 +80,7 @@ interface IShopItems {
   image: StaticImageData;
 }
 
-export const shopItems: IShopItems[] = [
+export const shopItems: IShopItem[] = [
   {
     name: "Hop Backpack",
     brand: "ODA",
