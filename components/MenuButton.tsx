@@ -1,17 +1,16 @@
 "use client";
 
-import { MenuContext } from "@/contexts/MenuContext";
-import { useContext } from "react";
+import { useMenu } from "@/contexts/MenuContext";
 
 function MenuButton() {
-  const menuCtx = useContext(MenuContext);
+  const { setIsMenuOpened, isMenuOpened } = useMenu();
 
   return (
     <button
-      onClick={() => menuCtx?.setIsMenuOpened((state) => !state)}
+      onClick={() => setIsMenuOpened((state) => !state)}
       className="uppercase transition-all hover:bg-[#262626] rounded-md py-1 px-2 lg:mr-[95px] md:mr-[85px]"
     >
-      {menuCtx?.isMenuOpened === false ? "Menu" : "Close"}
+      {isMenuOpened === false ? "Menu" : "Close"}
     </button>
   );
 }

@@ -6,6 +6,7 @@ import {
   ReactNode,
   SetStateAction,
   useState,
+  useContext,
 } from "react";
 
 type Props = {
@@ -17,7 +18,12 @@ export interface IMenuContext {
   setIsMenuOpened: Dispatch<SetStateAction<boolean>>;
 }
 
-const MenuContext = createContext<IMenuContext | null>(null);
+const initialState = {
+  isMenuOpened: false,
+  setIsMenuOpened: () => {},
+};
+
+const MenuContext = createContext<IMenuContext>(initialState);
 
 function MenuProvider({ children }: Props) {
   const [isMenuOpened, setIsMenuOpened] = useState<boolean>(false);
@@ -29,4 +35,8 @@ function MenuProvider({ children }: Props) {
   );
 }
 
-export { MenuProvider, MenuContext };
+function useMenu() {
+  return useContext(MenuContext);
+}
+
+export { MenuProvider, useMenu };
